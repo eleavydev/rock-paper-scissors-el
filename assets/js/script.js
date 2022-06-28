@@ -57,6 +57,42 @@
   */
 function checkWinner (playerChoice,machineChoice) {
    
+    alert(`In Check winner loop, Player Number isssss: ${playerChoice}. Computer Random Number isssss: ${machineChoice}`);
+    console.log(playerChoice);
+    console.log(machineChoice);
+
+    // Player and Computer have same choice (0 and 0, 1 and 1, 2 and 2)
+    if (playerChoice === machineChoice){
+        alert(`It's a draw!! Player Number is: ${playerChoice}. Computer Random Number isssss: ${machineChoice}`);
+    // Rock (0) and Paper (1)
+    }else if (playerChoice === "rock" && machineChoice === "paper"){
+        alert(`Paper covers Rock - Computer wins... Player Number is: ${playerChoice}. Computer Random Number isssss: ${machineChoice}`);
+        incrementMachineScore();
+    // Rock (0) and Scissors (2)
+    }else if (playerChoice === "rock" && machineChoice === "scissors"){
+        alert(`Rock blunts Scissors - Player wins... Player Number is: ${playerChoice}. Computer Random Number isssss: ${machineChoice}`);
+        incrementPlayerScore();
+        clapSound.play();
+    // Paper(1) and Rock (0)
+    }else if (playerChoice === "paper" && machineChoice === "rock"){
+        alert(`Paper covers Rock - Player wins... Player Number is: ${playerChoice}. Computer Random Number isssss: ${machineChoice}`);
+        incrementPlayerScore();
+        clapSound.play();
+    // Paper(1) and Scissors (2)
+    }else if (playerChoice === "paper" && machineChoice === "scissors"){
+        alert(`Scissors cut Paper - Computer wins... Player Number is: ${playerChoice}. Computer Random Number isssss: ${machineChoice}`);
+        incrementMachineScore();
+    // Scissors(2) and Rock(0)
+    }else if (playerChoice === "scissors" && machineChoice === "rock"){
+        alert(`Rock Blunts Scissors - Computer wins... Player Number is: ${playerChoice}. Computer Random Number isssss: ${machineChoice}`);
+        incrementMachineScore();
+    // Scissors(2) and Paper (1)
+    }else if (playerChoice === "scissors" && machineChoice === "paper"){
+        alert(`Scissors cut Paper - Player wins... Player Number is: ${playerChoice}. Computer Random Number isssss: ${machineChoice}`);
+        incrementPlayerScore();
+        clapSound.play();
+    }
+
 
 }
 
