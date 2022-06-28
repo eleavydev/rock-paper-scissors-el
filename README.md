@@ -1,108 +1,181 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rock Paper Scissors - You against the machine!!
 
-Welcome eleavydev,
+Rock Paper Scissors - You against the machine!! is a very simple website which allows users to play a game of Rock Paper Scissors. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Users of this game will be able to see the rules of the game, play against the computer, view their score and see who wins the entire game. 
+The winner is whoever wins the most out of 5 rounds. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+<!-- ![Screenshots of Red Roots Farm website](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1653391863/redrootsfarm/Website_Screenshot24052022_p2wam3.png "Red Roots Farm") -->
 
-## Gitpod Reminders
+#### Live website can be found at: https://eleavydev.github.io/rock-paper-scissors-el/
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## Features 
+### Existing Features
 
-A blue button should appear to click: _Make Public_,
+The first iteration of Rock paper Scissors is a simple one page website. 
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- __The Header (Including landing page image and Tagline)__
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+## The Header (including landing page image and Tagline)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+<!-- ![Landing Page](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1653388732/redrootsfarm/redroots_heroimage_withTagline_lv3ovl.png) -->
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+  - The landing page includes a photograph of Red Roots Farm with vibrant trees, flowers and green grass aiming to give the user an instant 'feel' for the Red Roots Farm space. 
+  - This section aims to invite the user in to Red Roots Farm with an animation to grab their attention and almost pull them gently inwards to explore more. 
+  - The tagline of "Reconnect - Realign - Rediscover" is immediately below the photograph in block capitals. This captures the essence of Red Roots Farm - Claire and Tom hope they can help people to reconnect, realign and rediscover during a visit to Red Roots Farm. 
 
-------
+## About Us Section
 
-## Release History
+<!-- ![About Us](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1653388731/redrootsfarm/redroots_aboutus_q4amon.png) -->
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+  - The About Us section sets the scene of what Red Roots Farm is, where it is located and introduces the owners. 
+  - It describes the Red Roots Farm concept with simple yet emotive language such as safe, peaceful, relax, realign and rediscover. This is in line with the Landing page photo and the tagline and aims to interest the user and invite them to learn more. 
+  - The guiding values of slowing down, minding ourselves, each other and the land are mentioned. 
+  - It also explains where the name "Red Roots farm" came from and relates it to visualising our base chakra with big strong red roots stretching deep into the earth, grounding us. 
+  - Tom and Claire, the owners of Red Roots farm are briefly introduced and their skills and passion for sustainability, wellness and creativity are highlighted. 
+  - A photo of a smiling Tom and Claire is included which makes it more personal and encourages the user to feel like a friend. 
+  - This opening section aims to give the user a mini introduction into the meaning and purpose of Red Roots farm and it's owners Tom and Claire. 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Design choices
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Certain design decisions were made to keep the website 'clean', uncluttered, simple and easy to navigate. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- In keeping with the essence of Red Roots Farm, photos on the website show flowers, greenery, colour and vibrancy of nature. 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- There are lots of images displayed on the website as the saying says... "A picture paints a thousand words". 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- Fonts chosen for the website were simple ones - Lato (For Headings) and Merriweather (For Body Text) as research indicated they pair well together and are "pleasant to read". 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- As an alternative to using pure white as background colour, the colour Snow (#FFFAFA) was used as research suggested this as a good alternative 
+[PicMonkey](https://www.picmonkey.com/colors/white/off-white). 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## User Stories
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- As a user I expect the site to be uncluttered and easy to read.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- As a user I expect the site to be easy to navigate. 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- As a user I want to know what page I am currently on. 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- As a user I want to know I can get back to Home from any page I am on. 
 
-------
+- As a user I want to know about Red Roots Farm without having to trawl through lots of information. 
 
-## FAQ about the uptime script
+- As a user I want to know the key points at a glance (What is Red Roots farm, who are the people behind it, what can I do there and what are the spaces there). 
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Testing 
 
-**How will this affect me?**
+Manual Testing 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- I tested that this website works in different browsers: Edge, Chrome and Safari. 
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- I tested that this website is responsive, and displays correctly on standard screen sizes using the devtools device toolbar. 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+- I confirmed that the navigation, header, about us, gallery and contact us text is legible and easy to understand. 
 
-**So….?**
+- I confirmed that the links throughout the site all work and go where they're meant to (Logo, Navigation Bar, Local Attraction website links to external, Social Media links in footer). 
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- I confirmed that the form works as expected. Every field (Name, Email address, Question/Comment) has required field validator and also Email address field requires email address. Finally, the submit button works correctly. 
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+Solved Bugs 
+- Logo on the Contact Us page didn't return back to index.html. 
+   - Fixed as required by changing url. 
+- Some of the images weren't loading correctly as initially I was hosting images within the site but then moved to Cloudinary.
+    - Fixed as required by correcting urls. 
+- Text Area on the Contact Us page wasn't resizing properly for smaller screens. 
+    - Fixed as required by setting max-width: 100% in media query. 
+-   Home link was displaying as Active on the Gallery page Navigation Bar, when Gallery should be displaying as active. 
+    - Fixed as required by setting class="active" for Gallery. 
+- Message input field on the Contact Us Page didn't have required field validator on it. 
+    - Fixed as required by including 'required'. 
+- Message input field wasn't getting the exact same settings applied as the Name and Email Address, so appeared visually inconsistent. 
+    - Fixed as required by correcting css selectors. 
+- Uisneach link in Local Attractions section wasn't pointing to correct website. 
+    - Fixed as required by changing url. 
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+### Validator Testing 
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- HTML
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Feleavydev.github.io%2Fredroots-farm%2Findex.html)
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feleavydev.github.io%2Fredroots-farm%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- Accessibility 
+  - I confirmed that the colours and fonts chosen are easy to read and accessible by running it through lighthouse in devtools. 
+ - ![Lighthouse Scores](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1653604983/redrootsfarm/lighthousescores_ekmdyz.png)
 
----
 
-Happy coding!
+### Unfixed Bugs
+
+No Unfixed bugs. 
+
+## Deployment
+
+- My Source Code on GitHub is available at: [eleavyGitHub](https://github.com/eleavydev/redroots-farm)
+
+- My live deployed project is available at [RedRootsFarm](https://eleavydev.github.io/redroots-farm/)
+
+### Cloning and Forking  
+
+1. Cloning
+
+- Go to my GutHub repository at: [eleavyGitHub](https://github.com/eleavydev/redroots-farm). 
+- Click on the Green "Code" drop down. 
+- Choose to either Download the code as a Zip file or Clone manually using Gitlink provided. 
+
+2. Forking
+
+- Go to my GitHub repository at: [eleavyGitHub](https://github.com/eleavydev/redroots-farm). 
+- Click the Fork button at the top right of the page and wait for a few seconds. 
+- You will see that this newly forked repository gets created under your GitHub account.  
+
+
+### Local Deployment 
+
+
+- Go to Gitpod.io and create a free account. 
+- Download and install necessary extension to Firefox/Chrome (This extension will add green Gitpod button to GitHub so you can easily open repository in Gitpod). 
+    - In Firefox, go to menu on the top right and click on Add-ons. From there then search for Gitpod.
+    - Type in Gitpod, and its the very first result is the extension that is required. 
+    - Click on it click on "Add to Firefox".
+    - Confirm permissions. 
+  - Go back to GitHub repository at: [eleavyGitHub](https://github.com/eleavydev/redroots-farm) and click on the green Gitpod button. 
+  - This will open the code in a new Gitpod workspace for you to edit. 
+  
+### Remote Deployment  
+
+
+- The site has already been deployed to GitHub pages. 
+- If you wish to deploy site, the steps to deploy are as follows: 
+  - In the GitHub repository, go to the Settings tab 
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+
+## Credits 
+
+### Content 
+
+- The text for the Home page was created by Red Roots farm and myself as website creator. 
+- The fonts (Lato and Merriweather) were taken from [Google fonts](https://fonts.google.com/). 
+- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- The Love Running and Coders Coffehouse projects were both used as great guides to help with this first project. 
+- Websites such as [Stackoverflow](https://stackoverflow.com/), [CommunitySpiceworks](https://community.spiceworks.com/) and [W3Schools](https://www.w3schools.com/) were consulted for help with this project. 
+- My mentor Chris was very patient and helpful during this process. 
+- Also our Cohort facilitators Kenan and Kasia along with classmates and peers on Slack and tutor support were very helpful to draw on for support. 
+
+### Media
+
+- The photos used throughout this site have all been created by Red Roots farm. 
+- Font Awesome [Font Awesome](https://fontawesome.com) was very useful to find interesting icons to use. 
+- Large photos were compressed through [Birme](https://www.birme.net/) 
+- Photos were then hosted on [Cloudinary](https://cloudinary.com/)

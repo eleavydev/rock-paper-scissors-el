@@ -37,7 +37,6 @@
  function runGame(playerChoice) {
     
      playerImage.src = `assets/images/${choices[playerChoice]}.png`;  
-     alert(playerImage.src);
      playerImage.alt = choices[playerChoice];
 
      // Call getRandomInt function to get Computer choice 
