@@ -1,0 +1,14 @@
+body {
+    background-color: aliceblue;
+    font-family: "Raleway", sans-serif;
+    color: #445361;
+    text-align: center;
+}
+
+/* --------- Heading */
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    border-style: double;
+}
