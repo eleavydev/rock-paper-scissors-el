@@ -34,6 +34,19 @@
   */
  function runGame(playerChoice) {
     
+     // Call getRandomInt function to get Computer choice 
+     let machineChoice = getRandomInt(3);
+     console.log(machineChoice);
+     alert(`Random Number isssss: ${machineChoice}`);
+ 
+    
+     if ( playerChoice == 0 || playerChoice == 1 || playerChoice == 2 )  {
+         alert(`Entering into loop with player choice : ${playerChoice}. and computer choice  ${machineChoice}.`);
+         checkWinner(choices[playerChoice], choices[machineChoice]);
+     }
+     else {
+        throw `Unknown player Choice: ${playerChoice}. Aborting! `;
+     }
 
 }
 
