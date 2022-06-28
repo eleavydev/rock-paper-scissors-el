@@ -110,6 +110,10 @@ function getRandomInt(max) {
  */
 function incrementPlayerScore() {
     
+    alert("In Increment Player score loop");
+    let oldScore = parseInt(document.getElementById("player-score").innerText);
+    alert(oldScore);
+    document.getElementById("player-score").innerText = ++ oldScore;
 
 }
 
@@ -118,5 +122,9 @@ function incrementPlayerScore() {
  */
 function incrementMachineScore() {
 
-
+    alert("In Increment Machine score loop");
+    let oldScore = parseInt(document.getElementById("computer-score").innerText);
+    
+    alert(oldScore);
+    document.getElementById("computer-score").innerText = ++ oldScore;
 }
