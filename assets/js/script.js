@@ -10,7 +10,7 @@
  const computerImage = document.getElementById("computer-image");
  const choices = ["rock", "paper", "scissors"];
  
- const clapSound = new Audio("assets/audio/clap.mp3");
+ let playerChoice;
 
 
 /**
@@ -20,9 +20,9 @@
     
     for (let button of buttons) {
        button.addEventListener("click", function() {
-               let playerChoice = this.getAttribute("data-choice");
-               alert(`Player Choice is : ${playerChoice}`);
-               runGame(playerChoice);
+               playerChoice = this.getAttribute("data-choice");
+            //    alert(`Player Choice is : ${playerChoice}`);
+               playRound(playerChoice);
            });
        }      
 
@@ -30,11 +30,11 @@
 
 
 /**
- * The main game function called when the user has selected a button. 
+ * The main playRound function is called when the user has selected a button. 
  * This function accepts one parameter, which is the data-choice value of selected button 
  * (which will be 0, 1 or 2 repesesenting Rock, Paper or Scissors)
   */
- function runGame(playerChoice) {
+ function playRound(playerChoice) {
     
      playerImage.src = `assets/images/${choices[playerChoice]}.png`;  
      playerImage.alt = choices[playerChoice];
@@ -42,19 +42,12 @@
      // Call getRandomInt function to get Computer choice 
      let machineChoice = getRandomInt(3);
      console.log(machineChoice);
-     alert(`Computer Choice is : ${machineChoice}`);
+    //  alert(`Computer Choice is : ${machineChoice}`);
 
      computerImage.src = `assets/images/${choices[machineChoice]}.png`;
      computerImage.alt = choices[machineChoice];
  
-    
-     if ( playerChoice == 0 || playerChoice == 1 || playerChoice == 2 )  {
-         alert(`Entering into loop with player choice : ${playerChoice}. and computer choice  ${machineChoice}.`);
-         checkWinner(choices[playerChoice], choices[machineChoice]);
-     }
-     else {
-        throw `Unknown player Choice: ${playerChoice}. Aborting! `;
-     }
+     checkWinner(choices[playerChoice], choices[machineChoice]);
 
 }
 
@@ -65,43 +58,51 @@
   */
 function checkWinner (playerChoice,machineChoice) {
    
-    alert(`In Check winner loop, Player Choice : ${playerChoice}. Computer Choice is : ${machineChoice}`);
+    // alert(`In Check winner loop, Player Choice : ${playerChoice}. Computer Choice is : ${machineChoice}`);
     console.log(playerChoice);
     console.log(machineChoice);
 
-    // Player and Computer have same choice (0 and 0, 1 and 1, 2 and 2)
-    if (playerChoice === machineChoice){
-        alert(`It's a draw!!  Player Choice is: ${playerChoice}. Computer Choice is : ${machineChoice}`);
-    // Rock (0) and Paper (1)
-    }else if (playerChoice === "rock" && machineChoice === "paper"){
-        alert(`Paper covers Rock - Hard luck... Computer wins. Player Choice is : ${playerChoice}. Computer Choice is : ${machineChoice}`);
-        incrementMachineScore();
-    // Rock (0) and Scissors (2)
-    }else if (playerChoice === "rock" && machineChoice === "scissors"){
-        alert(`Rock blunts Scissors - You rock!! Player wins... Player Choice is : ${playerChoice}. Computer Choice is : ${machineChoice}`);
-        incrementPlayerScore();
-        clapSound.play();
-    // Paper(1) and Rock (0)
-    }else if (playerChoice === "paper" && machineChoice === "rock"){
-        alert(`Paper covers Rock - You rock!! Player wins... Player Choice is : ${playerChoice}. Computer Choice is :  ${machineChoice}`);
-        incrementPlayerScore();
-        clapSound.play();
-    // Paper(1) and Scissors (2)
-    }else if (playerChoice === "paper" && machineChoice === "scissors"){
-        alert(`Scissors cut Paper - Hard luck... Computer wins. Player Choice is : ${playerChoice}. Computer Choice is :  ${machineChoice}`);
-        incrementMachineScore();
-    // Scissors(2) and Rock(0)
-    }else if (playerChoice === "scissors" && machineChoice === "rock"){
-        alert(`Rock Blunts Scissors - Hard luck... Computer wins. Player Choice is : ${playerChoice}. Computer Choice is :  ${machineChoice}`);
-        incrementMachineScore();
-    // Scissors(2) and Paper (1)
-    }else if (playerChoice === "scissors" && machineChoice === "paper"){
-        alert(`Scissors cut Paper - - You rock!! Player wins... Player Choice is : ${playerChoice}. Computer Choice is :  ${machineChoice}`);
-        incrementPlayerScore();
-        clapSound.play();
-    }
+    // Run through logic to check which of the 7 Cases is true, alert user and call Increment Score function
+    switch (true) {
 
-
+        // Case 1:Player and Computer have same choice (0 and 0, 1 and 1, 2 and 2)
+        case (playerChoice === machineChoice) :
+            alert(`New Switch statement, It's a draw!!  Player Choice is: ${playerChoice}. Computer Choice is : ${machineChoice}`);
+          break;
+        // Case 2: Player chooses Rock and Computer random choice is Paper 
+        case (playerChoice === "rock" && machineChoice === "paper") :
+            alert(`New Switch statement. Paper covers Rock - Hard luck... Computer wins. Player Choice is : ${playerChoice}. Computer Choice is : ${machineChoice}`);
+            incrementMachineScore();
+          break;
+        // Case 3: Player chooses Rock and Computer random choice is Scissors  
+        case (playerChoice === "rock" && machineChoice === "scissors") :
+            alert(`New Switch statement. Rock blunts Scissors - You rock!! Player wins... Player Choice is : ${playerChoice}. Computer Choice is : ${machineChoice}`);
+            incrementPlayerScore();
+          break;
+        // Case 4: Player chooses Paper and Computer random choice is Rock  
+        case (playerChoice === "paper" && machineChoice === "rock") :
+            alert(`New Switch statement. Paper covers Rock - You rock!! Player wins... Player Choice is : ${playerChoice}. Computer Choice is :  ${machineChoice}`);
+            incrementPlayerScore();
+          break;
+        // Case 5: Player chooses Paper and Computer random choice is Scissors  
+        case (playerChoice === "paper" && machineChoice === "scissors") :
+            alert(`New Switch statement. Scissors cut Paper - Hard luck... Computer wins. Player Choice is : ${playerChoice}. Computer Choice is : ${machineChoice}`);
+            incrementMachineScore();
+          break;
+        // Case 6: Player chooses Scissors and Computer random choice is Rock  
+        case (playerChoice === "scissors" && machineChoice === "rock") :
+            alert(`New Switch statement. Rock Blunts Scissors - Hard luck... Computer wins. Player Choice is : ${playerChoice}. Computer Choice is : ${machineChoice}`);
+            incrementMachineScore();
+          break;
+        // Case 7: Player chooses Scissors and Computer random choice is Paper  
+        case (playerChoice === "scissors" && machineChoice === "paper") :
+            alert(`New Switch statement. Scissors cut Paper - - You rock!! Player wins... Player Choice is : ${playerChoice}. Computer Choice is :  ${machineChoice}`);
+            incrementPlayerScore();
+            break;
+         default:
+   
+       }
+    
 }
 
 
@@ -118,9 +119,9 @@ function getRandomInt(max) {
  */
 function incrementPlayerScore() {
     
-    alert("In Increment Player score loop");
+    // alert("In Increment Player score loop");
     let oldScore = parseInt(document.getElementById("player-score").innerText);
-    alert(oldScore);
+    // alert(oldScore);
     document.getElementById("player-score").innerText = ++ oldScore;
 
 }
@@ -130,9 +131,9 @@ function incrementPlayerScore() {
  */
 function incrementMachineScore() {
 
-    alert("In Increment Machine score loop");
+    // alert("In Increment Machine score loop");
     let oldScore = parseInt(document.getElementById("computer-score").innerText);
     
-    alert(oldScore);
+    // alert(oldScore);
     document.getElementById("computer-score").innerText = ++ oldScore;
 }
