@@ -72,32 +72,32 @@ function checkWinner (playerChoice,machineChoice) {
         // Case 2: Player chooses Rock and Computer random choice is Paper 
         case (playerChoice === "rock" && machineChoice === "paper") :
             alert(`New Switch statement. Paper covers Rock - Hard luck... Computer wins. Player Choice is : ${playerChoice}. Computer Choice is : ${machineChoice}`);
-            incrementMachineScore();
+            incrementScore("machine");
           break;
         // Case 3: Player chooses Rock and Computer random choice is Scissors  
         case (playerChoice === "rock" && machineChoice === "scissors") :
             alert(`New Switch statement. Rock blunts Scissors - You rock!! Player wins... Player Choice is : ${playerChoice}. Computer Choice is : ${machineChoice}`);
-            incrementPlayerScore();
+            incrementScore("player");
           break;
         // Case 4: Player chooses Paper and Computer random choice is Rock  
         case (playerChoice === "paper" && machineChoice === "rock") :
             alert(`New Switch statement. Paper covers Rock - You rock!! Player wins... Player Choice is : ${playerChoice}. Computer Choice is :  ${machineChoice}`);
-            incrementPlayerScore();
+            incrementScore("player");
           break;
         // Case 5: Player chooses Paper and Computer random choice is Scissors  
         case (playerChoice === "paper" && machineChoice === "scissors") :
             alert(`New Switch statement. Scissors cut Paper - Hard luck... Computer wins. Player Choice is : ${playerChoice}. Computer Choice is : ${machineChoice}`);
-            incrementMachineScore();
+            incrementScore("machine");
           break;
         // Case 6: Player chooses Scissors and Computer random choice is Rock  
         case (playerChoice === "scissors" && machineChoice === "rock") :
             alert(`New Switch statement. Rock Blunts Scissors - Hard luck... Computer wins. Player Choice is : ${playerChoice}. Computer Choice is : ${machineChoice}`);
-            incrementMachineScore();
+            incrementScore("machine");
           break;
         // Case 7: Player chooses Scissors and Computer random choice is Paper  
         case (playerChoice === "scissors" && machineChoice === "paper") :
             alert(`New Switch statement. Scissors cut Paper - - You rock!! Player wins... Player Choice is : ${playerChoice}. Computer Choice is :  ${machineChoice}`);
-            incrementPlayerScore();
+            incrementScore("player");
             break;
          default:
    
@@ -115,25 +115,26 @@ function getRandomInt(max) {
 
 
 /**
- * Gets the current Player score from the DOM and increments it by 1
+ * Accepts parameter representing round winner (either Player or Machine)
+ * Gets the current score from the DOM and increments it by 1
  */
-function incrementPlayerScore() {
-    
-    // alert("In Increment Player score loop");
-    let oldScore = parseInt(document.getElementById("player-score").innerText);
-    // alert(oldScore);
-    document.getElementById("player-score").innerText = ++ oldScore;
+ function incrementScore(roundWinner) {
 
-}
+  let oldPlayerScore = parseInt(document.getElementById("player-score").innerText);
+  let oldMachineScore = parseInt(document.getElementById("computer-score").innerText);
 
-/**
- * Gets the current Machine score from the DOM and increments it by 1
- */
-function incrementMachineScore() {
+switch (true) {
+    // /If player was round winner increment Player Score
+  case (roundWinner === "player") :
+    document.getElementById("player-score").innerText = ++ oldPlayerScore;
+    break;
+    // /If machine was round winner increment Machine Score
+  case (roundWinner === "machine") :
+    document.getElementById("computer-score").innerText = ++ oldMachineScore;
+    break;
 
-    // alert("In Increment Machine score loop");
-    let oldScore = parseInt(document.getElementById("computer-score").innerText);
-    
-    // alert(oldScore);
-    document.getElementById("computer-score").innerText = ++ oldScore;
-}
+   default:
+
+ }
+
+ }
