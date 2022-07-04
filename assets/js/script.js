@@ -67,35 +67,49 @@ function checkWinner (playerChoice,machineChoice) {
 
         // Case 1:Player and Machine have same choice (0 and 0, 1 and 1, 2 and 2)
         case (playerChoice === machineChoice) :
+            text = `Passing text, It's a draw!!  Player Choice is: ${playerChoice}. Machine Choice is : ${machineChoice}`;
+            alert(text);
             alert(`New Switch statement, It's a draw!!  Player Choice is: ${playerChoice}. Machine Choice is : ${machineChoice}`);
           break;
         // Case 2: Player chooses Rock and Machine random choice is Paper 
         case (playerChoice === "rock" && machineChoice === "paper") :
+            text = `Passing text. Paper covers Rock - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`;
+            alert(text);
             alert(`New Switch statement. Paper covers Rock - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`);
             incrementScore("machine");
           break;
         // Case 3: Player chooses Rock and Machine random choice is Scissors  
         case (playerChoice === "rock" && machineChoice === "scissors") :
+          text = `Passing text. Rock blunts Scissors - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`;
+            alert(text);
             alert(`New Switch statement. Rock blunts Scissors - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`);
             incrementScore("player");
           break;
         // Case 4: Player chooses Paper and Machine random choice is Rock  
         case (playerChoice === "paper" && machineChoice === "rock") :
-            alert(`New Switch statement. Paper covers Rock - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is :  ${machineChoice}`);
+          text = `Passing text. Paper covers Rock - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is :  ${machineChoice}`;
+          alert(text);    
+          alert(`New Switch statement. Paper covers Rock - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is :  ${machineChoice}`);
             incrementScore("player");
           break;
         // Case 5: Player chooses Paper and Machine random choice is Scissors  
         case (playerChoice === "paper" && machineChoice === "scissors") :
+          text = `Passing text. Scissors cut Paper - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`;
+          alert(text); 
             alert(`New Switch statement. Scissors cut Paper - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`);
             incrementScore("machine");
           break;
         // Case 6: Player chooses Scissors and Machine random choice is Rock  
         case (playerChoice === "scissors" && machineChoice === "rock") :
+          text = `Passing text Rock Blunts Scissors - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`;
+          alert(text); 
             alert(`New Switch statement. Rock Blunts Scissors - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`);
             incrementScore("machine");
           break;
         // Case 7: Player chooses Scissors and Machine random choice is Paper  
         case (playerChoice === "scissors" && machineChoice === "paper") :
+          text = `Passing text. Scissors cut Paper - - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is :  ${machineChoice}`;
+          alert(text); 
             alert(`New Switch statement. Scissors cut Paper - - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is :  ${machineChoice}`);
             incrementScore("player");
             break;
@@ -132,9 +146,37 @@ switch (true) {
   case (roundWinner === "machine") :
     document.getElementById("machine-score").innerText = ++ oldMachineScore;
     break;
-
    default:
+ }
+
+alert(document.getElementById("player-score").innerText);
+alert(document.getElementById("machine-score").innerText);
+
+if (document.getElementById("player-score").innerText == "5") {
+  alert("Game over, Congrats You have won - You rock!!");
+  resetGame();
+} else if (document.getElementById("machine-score").innerText == "5") {
+  alert("Game over - Machine has won, Better luck next time!");
+  resetGame();
+} else {
+  //do nothing 
+}
 
  }
 
- }
+
+ function resetGame(){
+alert("hello elaine - game over");
+
+// Reset player score and machine score back to zero
+document.getElementById("player-score").innerText = 0;
+document.getElementById("machine-score").innerText = 0;
+
+// Reset images back to Rock, paper, scissors logo
+playerImage.src = `assets/images/rpslogo_small.png`;  
+playerImage.alt = "Rock Paper Scissors"
+
+machineImage.src = `assets/images/rpslogo_small.png`;  
+machineImage.alt = "Rock Paper Scissors"
+
+}
