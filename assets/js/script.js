@@ -13,6 +13,10 @@ const choices = ["rock", "paper", "scissors"];
 let text;
 let playerChoice;
 
+// const winnerModal = document.getElementsByClassName('winner-modal')[0];
+// const modalHeader = document.getElementsByClassName('modal-header')[0];
+const modalParagraph = document.getElementsByClassName('modal-result')[0];
+
 
 /**
  * Once the DOM has finished loading, loop through all of the buttons and Add event listener. 
@@ -27,6 +31,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 })
+
+// /**
+//  * Close winner modal that is passed into the function
+//  */
+//  closeBtn.addEventListener('click', () => {
+//   closeModal(winnerModal);
+// });
+
+
+// Get the modal
+var modal = document.getElementById("gameModal");
+
+// // Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
 
 /**
@@ -101,7 +122,7 @@ function checkWinner(playerChoice, machineChoice) {
       text = `Round Winner: You! Scissors cut Paper - You rock!!`;
       incrementScore("player", text);
       break;
-    
+
   }
 
 }
@@ -134,18 +155,39 @@ function incrementScore(roundWinner, text) {
     case (roundWinner === ""):
       document.getElementById("game-messages").innerText = text;
       break;
-    
+
   }
 
   //Test to see if either Score is 5 and call resetGame function
   if (document.getElementById("player-score").innerText == "5") {
-    alert("Game over, Congrats You have won with Score of 5 - You rock!!");
+    // alert("Game over, Congrats You have won with Score of 5 - You rock!!");
+    // winnerModal.style.display = 'block';
+    // modalHeader.textContent = 'Congrats! You Won The Game!';
+    modal.style.display = "block";
+    modalParagraph.textContent = 'Congrats, You have won with Score of 5 - You rock!! Press X to exit and play again. ';
     resetGame();
   } else if (document.getElementById("machine-score").innerText == "5") {
-    alert("Game over - Machine has won with Score of 5, Better luck next time!");
+    // alert("Game over - Machine has won with Score of 5, Better luck next time!");
+    // winnerModal.style.display = 'block';
+    // modalHeader.textContent = 'Hard Luck! You lost The Game!';
+    // modalParagraph.textContent = 'Hard Luck! You lost The Game!';
+    modal.style.display = "block";
+    modalParagraph.textContent = 'Machine has won with Score of 5, Better luck next time! Press X to exit and play again. ';
     resetGame();
   }
 
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 
 
@@ -160,9 +202,9 @@ function resetGame() {
 
   // Reset images and alt text
   playerImage.src = `assets/images/rpslogo_small.png`;
-  playerImage.alt = "Rock Paper Scissors"
+  playerImage.alt = "Rock Paper Scissors";
   machineImage.src = `assets/images/rpslogo_small.png`;
-  machineImage.alt = "Rock Paper Scissors"
+  machineImage.alt = "Rock Paper Scissors";
 
   //Reset Game Messages area 
   document.getElementById("game-messages").innerText = "";
