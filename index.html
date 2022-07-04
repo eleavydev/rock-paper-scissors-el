@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--METATAGS-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rock, Paper Scissors, Computer game - you against the machine">
+    <meta name="keywords"
+        content="rock, paper, scissors, game, fun, simple, player vs machine">
+    <!--Link to CSS Stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css">
     <!--Link to Fav Icon-->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
+     <!--HEADER-->
     <header>
         <h1>Rock, Paper, Scissors - You against the Machine!</h1>            
     </header>
+    <!--MAIN CONTENT-->
+    <!--Game area -->
     <section class="game-area">
         <div>
             <p>Player, please make your choice ... choose Rock, Paper or Scissors below:</p>
@@ -21,21 +29,25 @@
             <button aria-label="Rock" data-choice="2" class="control"><img id="image" src="assets/images/scissors1.png"/></button> 
         </div>
         <div id="messages"></div>
+        <!--Player area showing player score and image representing player choice-->
         <div class="player">
             <h3 class="scores">Your score: <span id="player-score">0</span></h3>    
             <img id="player-image" src="assets/images/rpslogo_small.png" alt="Rock Paper Scissors">        
         </div>
-        <div class="computer">
-            <h3 class="scores">Computer score: <span id="computer-score">0</span></h3>
-            <img id="computer-image" src="assets/images/rpslogo_small.png" alt="Rock Paper Scissors">     
+        <!--Machine area showing machine score and image representing machine choice-->
+        <div class="machine">
+            <h3 class="scores">Machine score: <span id="machine-score">0</span></h3>
+            <img id="machine-image" src="assets/images/rpslogo_small.png" alt="Rock Paper Scissors">     
             <img>
         </div>
     </section>
     <footer>
+    <!--Rules area -->
         <div id="rules-area">
             <img src="assets/images/rps_rules2.png">  
         </div>              
     </footer>
+    <!--Link to Javascript file-->
     <script src="assets/js/script.js"></script>
 </body>
 </html>

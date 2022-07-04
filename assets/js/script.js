@@ -5,9 +5,9 @@
  */
  const buttons = document.getElementsByClassName("control");
  const playerScore = document.getElementById("player-score");
- const computerScore = document.getElementById("computer-score");
+ const machineScore = document.getElementById("machine-score");
  const playerImage = document.getElementById("player-image");
- const computerImage = document.getElementById("computer-image");
+ const machineImage = document.getElementById("machine-image");
  const choices = ["rock", "paper", "scissors"];
  
  let playerChoice;
@@ -39,13 +39,13 @@
      playerImage.src = `assets/images/${choices[playerChoice]}.png`;  
      playerImage.alt = choices[playerChoice];
 
-     // Call getRandomInt function to get Computer choice 
+     // Call getRandomInt function to get Machine choice 
      let machineChoice = getRandomInt(3);
      console.log(machineChoice);
-    //  alert(`Computer Choice is : ${machineChoice}`);
+    //  alert(`Machine Choice is : ${machineChoice}`);
 
-     computerImage.src = `assets/images/${choices[machineChoice]}.png`;
-     computerImage.alt = choices[machineChoice];
+     machineImage.src = `assets/images/${choices[machineChoice]}.png`;
+     machineImage.alt = choices[machineChoice];
  
      checkWinner(choices[playerChoice], choices[machineChoice]);
 
@@ -58,45 +58,45 @@
   */
 function checkWinner (playerChoice,machineChoice) {
    
-    // alert(`In Check winner loop, Player Choice : ${playerChoice}. Computer Choice is : ${machineChoice}`);
+    // alert(`In Check winner loop, Player Choice : ${playerChoice}. Machine Choice is : ${machineChoice}`);
     console.log(playerChoice);
     console.log(machineChoice);
 
     // Run through logic to check which of the 7 Cases is true, alert user and call Increment Score function
     switch (true) {
 
-        // Case 1:Player and Computer have same choice (0 and 0, 1 and 1, 2 and 2)
+        // Case 1:Player and Machine have same choice (0 and 0, 1 and 1, 2 and 2)
         case (playerChoice === machineChoice) :
-            alert(`New Switch statement, It's a draw!!  Player Choice is: ${playerChoice}. Computer Choice is : ${machineChoice}`);
+            alert(`New Switch statement, It's a draw!!  Player Choice is: ${playerChoice}. Machine Choice is : ${machineChoice}`);
           break;
-        // Case 2: Player chooses Rock and Computer random choice is Paper 
+        // Case 2: Player chooses Rock and Machine random choice is Paper 
         case (playerChoice === "rock" && machineChoice === "paper") :
-            alert(`New Switch statement. Paper covers Rock - Hard luck... Computer wins. Player Choice is : ${playerChoice}. Computer Choice is : ${machineChoice}`);
+            alert(`New Switch statement. Paper covers Rock - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`);
             incrementScore("machine");
           break;
-        // Case 3: Player chooses Rock and Computer random choice is Scissors  
+        // Case 3: Player chooses Rock and Machine random choice is Scissors  
         case (playerChoice === "rock" && machineChoice === "scissors") :
-            alert(`New Switch statement. Rock blunts Scissors - You rock!! Player wins... Player Choice is : ${playerChoice}. Computer Choice is : ${machineChoice}`);
+            alert(`New Switch statement. Rock blunts Scissors - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`);
             incrementScore("player");
           break;
-        // Case 4: Player chooses Paper and Computer random choice is Rock  
+        // Case 4: Player chooses Paper and Machine random choice is Rock  
         case (playerChoice === "paper" && machineChoice === "rock") :
-            alert(`New Switch statement. Paper covers Rock - You rock!! Player wins... Player Choice is : ${playerChoice}. Computer Choice is :  ${machineChoice}`);
+            alert(`New Switch statement. Paper covers Rock - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is :  ${machineChoice}`);
             incrementScore("player");
           break;
-        // Case 5: Player chooses Paper and Computer random choice is Scissors  
+        // Case 5: Player chooses Paper and Machine random choice is Scissors  
         case (playerChoice === "paper" && machineChoice === "scissors") :
-            alert(`New Switch statement. Scissors cut Paper - Hard luck... Computer wins. Player Choice is : ${playerChoice}. Computer Choice is : ${machineChoice}`);
+            alert(`New Switch statement. Scissors cut Paper - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`);
             incrementScore("machine");
           break;
-        // Case 6: Player chooses Scissors and Computer random choice is Rock  
+        // Case 6: Player chooses Scissors and Machine random choice is Rock  
         case (playerChoice === "scissors" && machineChoice === "rock") :
-            alert(`New Switch statement. Rock Blunts Scissors - Hard luck... Computer wins. Player Choice is : ${playerChoice}. Computer Choice is : ${machineChoice}`);
+            alert(`New Switch statement. Rock Blunts Scissors - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`);
             incrementScore("machine");
           break;
-        // Case 7: Player chooses Scissors and Computer random choice is Paper  
+        // Case 7: Player chooses Scissors and Machine random choice is Paper  
         case (playerChoice === "scissors" && machineChoice === "paper") :
-            alert(`New Switch statement. Scissors cut Paper - - You rock!! Player wins... Player Choice is : ${playerChoice}. Computer Choice is :  ${machineChoice}`);
+            alert(`New Switch statement. Scissors cut Paper - - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is :  ${machineChoice}`);
             incrementScore("player");
             break;
          default:
@@ -121,7 +121,7 @@ function getRandomInt(max) {
  function incrementScore(roundWinner) {
 
   let oldPlayerScore = parseInt(document.getElementById("player-score").innerText);
-  let oldMachineScore = parseInt(document.getElementById("computer-score").innerText);
+  let oldMachineScore = parseInt(document.getElementById("machine-score").innerText);
 
 switch (true) {
     // /If player was round winner increment Player Score
@@ -130,7 +130,7 @@ switch (true) {
     break;
     // /If machine was round winner increment Machine Score
   case (roundWinner === "machine") :
-    document.getElementById("computer-score").innerText = ++ oldMachineScore;
+    document.getElementById("machine-score").innerText = ++ oldMachineScore;
     break;
 
    default:
