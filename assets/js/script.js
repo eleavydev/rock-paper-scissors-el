@@ -21,7 +21,6 @@
     for (let button of buttons) {
        button.addEventListener("click", function() {
                playerChoice = this.getAttribute("data-choice");
-            //    alert(`Player Choice is : ${playerChoice}`);
                playRound(playerChoice);
            });
        }      
@@ -41,8 +40,6 @@
 
      // Call getRandomInt function to get Machine choice 
      let machineChoice = getRandomInt(3);
-     console.log(machineChoice);
-    //  alert(`Machine Choice is : ${machineChoice}`);
 
      machineImage.src = `assets/images/${choices[machineChoice]}.png`;
      machineImage.alt = choices[machineChoice];
@@ -58,59 +55,41 @@
   */
 function checkWinner (playerChoice,machineChoice) {
    
-    // alert(`In Check winner loop, Player Choice : ${playerChoice}. Machine Choice is : ${machineChoice}`);
-    console.log(playerChoice);
-    console.log(machineChoice);
-
     // Run through logic to check which of the 7 Cases is true, alert user and call Increment Score function
     switch (true) {
 
         // Case 1:Player and Machine have same choice (0 and 0, 1 and 1, 2 and 2)
         case (playerChoice === machineChoice) :
             text = `Passing text, It's a draw!!  Player Choice is: ${playerChoice}. Machine Choice is : ${machineChoice}`;
-            alert(text);
-            alert(`New Switch statement, It's a draw!!  Player Choice is: ${playerChoice}. Machine Choice is : ${machineChoice}`);
           break;
         // Case 2: Player chooses Rock and Machine random choice is Paper 
         case (playerChoice === "rock" && machineChoice === "paper") :
             text = `Passing text. Paper covers Rock - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`;
-            alert(text);
-            alert(`New Switch statement. Paper covers Rock - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`);
             incrementScore("machine");
           break;
         // Case 3: Player chooses Rock and Machine random choice is Scissors  
         case (playerChoice === "rock" && machineChoice === "scissors") :
           text = `Passing text. Rock blunts Scissors - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`;
-            alert(text);
-            alert(`New Switch statement. Rock blunts Scissors - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`);
             incrementScore("player");
           break;
         // Case 4: Player chooses Paper and Machine random choice is Rock  
         case (playerChoice === "paper" && machineChoice === "rock") :
           text = `Passing text. Paper covers Rock - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is :  ${machineChoice}`;
-          alert(text);    
-          alert(`New Switch statement. Paper covers Rock - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is :  ${machineChoice}`);
             incrementScore("player");
           break;
         // Case 5: Player chooses Paper and Machine random choice is Scissors  
         case (playerChoice === "paper" && machineChoice === "scissors") :
           text = `Passing text. Scissors cut Paper - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`;
-          alert(text); 
-            alert(`New Switch statement. Scissors cut Paper - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`);
             incrementScore("machine");
           break;
         // Case 6: Player chooses Scissors and Machine random choice is Rock  
         case (playerChoice === "scissors" && machineChoice === "rock") :
           text = `Passing text Rock Blunts Scissors - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`;
-          alert(text); 
-            alert(`New Switch statement. Rock Blunts Scissors - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`);
             incrementScore("machine");
           break;
         // Case 7: Player chooses Scissors and Machine random choice is Paper  
         case (playerChoice === "scissors" && machineChoice === "paper") :
           text = `Passing text. Scissors cut Paper - - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is :  ${machineChoice}`;
-          alert(text); 
-            alert(`New Switch statement. Scissors cut Paper - - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is :  ${machineChoice}`);
             incrementScore("player");
             break;
          default:
@@ -149,8 +128,6 @@ switch (true) {
    default:
  }
 
-alert(document.getElementById("player-score").innerText);
-alert(document.getElementById("machine-score").innerText);
 
 if (document.getElementById("player-score").innerText == "5") {
   alert("Game over, Congrats You have won - You rock!!");
@@ -172,7 +149,7 @@ alert("hello elaine - game over");
 document.getElementById("player-score").innerText = 0;
 document.getElementById("machine-score").innerText = 0;
 
-// Reset images back to Rock, paper, scissors logo
+// Reset images and alt text back to Rock, paper, scissors logo
 playerImage.src = `assets/images/rpslogo_small.png`;  
 playerImage.alt = "Rock Paper Scissors"
 
