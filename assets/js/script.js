@@ -9,6 +9,7 @@
  const playerImage = document.getElementById("player-image");
  const machineImage = document.getElementById("machine-image");
  const choices = ["rock", "paper", "scissors"];
+//  const text = "test";
  
  let playerChoice;
 
@@ -46,6 +47,8 @@
  
      checkWinner(choices[playerChoice], choices[machineChoice]);
 
+     document.getElementById("game-messages").innerText = "Test test hello hello";
+
 }
 
 
@@ -61,37 +64,44 @@ function checkWinner (playerChoice,machineChoice) {
         // Case 1:Player and Machine have same choice (0 and 0, 1 and 1, 2 and 2)
         case (playerChoice === machineChoice) :
             text = `Passing text, It's a draw!!  Player Choice is: ${playerChoice}. Machine Choice is : ${machineChoice}`;
+            // alert(text);
           break;
         // Case 2: Player chooses Rock and Machine random choice is Paper 
         case (playerChoice === "rock" && machineChoice === "paper") :
             text = `Passing text. Paper covers Rock - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`;
-            incrementScore("machine");
+            // alert(text);
+            incrementScore("machine",text);
           break;
         // Case 3: Player chooses Rock and Machine random choice is Scissors  
         case (playerChoice === "rock" && machineChoice === "scissors") :
           text = `Passing text. Rock blunts Scissors - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`;
-            incrementScore("player");
+          // alert(text);  
+          incrementScore("player",text);
           break;
         // Case 4: Player chooses Paper and Machine random choice is Rock  
         case (playerChoice === "paper" && machineChoice === "rock") :
           text = `Passing text. Paper covers Rock - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is :  ${machineChoice}`;
-            incrementScore("player");
+          // alert(text);
+          incrementScore("player", text);
           break;
         // Case 5: Player chooses Paper and Machine random choice is Scissors  
         case (playerChoice === "paper" && machineChoice === "scissors") :
           text = `Passing text. Scissors cut Paper - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`;
-            incrementScore("machine");
+          // alert(text);
+          incrementScore("machine",text);
           break;
         // Case 6: Player chooses Scissors and Machine random choice is Rock  
         case (playerChoice === "scissors" && machineChoice === "rock") :
           text = `Passing text Rock Blunts Scissors - Hard luck... Machine wins. Player Choice is : ${playerChoice}. Machine Choice is : ${machineChoice}`;
-            incrementScore("machine");
+          // alert(text);
+          incrementScore("machine",text);
           break;
         // Case 7: Player chooses Scissors and Machine random choice is Paper  
         case (playerChoice === "scissors" && machineChoice === "paper") :
           text = `Passing text. Scissors cut Paper - - You rock!! Player wins... Player Choice is : ${playerChoice}. Machine Choice is :  ${machineChoice}`;
-            incrementScore("player");
-            break;
+          // alert(text);
+          incrementScore("player",text);
+          break;
          default:
    
        }
@@ -111,7 +121,7 @@ function getRandomInt(max) {
  * Accepts parameter representing round winner (either Player or Machine)
  * Gets the current score from the DOM and increments it by 1
  */
- function incrementScore(roundWinner) {
+ function incrementScore(roundWinner,text) {
 
   let oldPlayerScore = parseInt(document.getElementById("player-score").innerText);
   let oldMachineScore = parseInt(document.getElementById("machine-score").innerText);
@@ -120,10 +130,14 @@ switch (true) {
     // /If player was round winner increment Player Score
   case (roundWinner === "player") :
     document.getElementById("player-score").innerText = ++ oldPlayerScore;
+    // document.getElementById("game-messages").innerText = "Howya, player won";//"text;"
+    document.getElementById("game-messages").innerText = "Game over. Player has won!";
     break;
     // /If machine was round winner increment Machine Score
   case (roundWinner === "machine") :
     document.getElementById("machine-score").innerText = ++ oldMachineScore;
+    // document.getElementById("game-messages").innerText = "Howya, computer won"; //text;
+    document.getElementById("game-messages").innerText = "Game over. Player has won!";
     break;
    default:
  }
@@ -155,5 +169,7 @@ playerImage.alt = "Rock Paper Scissors"
 
 machineImage.src = `assets/images/rpslogo_small.png`;  
 machineImage.alt = "Rock Paper Scissors"
+
+document.getElementById("game-messages").innerText = "";
 
 }
