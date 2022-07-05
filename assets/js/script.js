@@ -164,7 +164,7 @@ function incrementScore(roundWinner, text) {
     // winnerModal.style.display = 'block';
     // modalHeader.textContent = 'Congrats! You Won The Game!';
     modal.style.display = "block";
-    modalParagraph.textContent = 'Congrats, You have won with Score of 5 - You rock!! Press X to exit and play again. ';
+    modalParagraph.textContent = 'Congrats, You have won with Score of 5 - You rock!! Press X in Top Right corner to exit and play again. ';
     resetGame();
   } else if (document.getElementById("machine-score").innerText == "5") {
     // alert("Game over - Machine has won with Score of 5, Better luck next time!");
@@ -172,7 +172,7 @@ function incrementScore(roundWinner, text) {
     // modalHeader.textContent = 'Hard Luck! You lost The Game!';
     // modalParagraph.textContent = 'Hard Luck! You lost The Game!';
     modal.style.display = "block";
-    modalParagraph.textContent = 'Machine has won with Score of 5, Better luck next time! Press X to exit and play again. ';
+    modalParagraph.textContent = 'Machine has won with Score of 5, Better luck next time! Press X in Top Right corner to exit and play again. ';
     resetGame();
   }
 
