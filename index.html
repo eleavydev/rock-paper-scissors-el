@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!--METATAGS-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Rock, Paper Scissors, Computer game - you against the machine">
-    <meta name="keywords"
-        content="rock, paper, scissors, game, fun, simple, player vs machine">
+    <meta name="keywords" content="rock, paper, scissors, game, fun, simple, player vs machine">
     <!--Link to CSS Stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css">
     <!--Link to Fav Icon-->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <title>Rock Paper Scissors</title>
 </head>
+
 <body>
-     <!--HEADER-->
+    <!--HEADER-->
     <header>
-        <h1>Rock, Paper, Scissors - You against the Machine!</h1>            
+        <h1>Rock, Paper, Scissors - You against the Machine!</h1>
     </header>
     <!--MAIN CONTENT-->
     <!--Game area -->
     <section class="game-area">
-        <div>
+        <div class="choices">
             <p>Player, please make your choice ... choose Rock, Paper or Scissors below:</p>
-            <button aria-label="Rock" data-choice="0" class="control"><img class="image" src="assets/images/rock1.png" alt="Rock"/></button> 
-            <button aria-label="Rock" data-choice="1" class="control"><img class="image" src="assets/images/paper1.png" alt="Paper"/></button> 
-            <button aria-label="Rock" data-choice="2" class="control"><img class="image" src="assets/images/scissors1.png" alt="Scissors"/></button> 
+            <button aria-label="Rock" data-choice="0" class="control"><img class="image" src="assets/images/rock1.png"
+                    alt="Rock" /></button>
+            <button aria-label="Rock" data-choice="1" class="control"><img class="image" src="assets/images/paper1.png"
+                    alt="Paper" /></button>
+            <button aria-label="Rock" data-choice="2" class="control"><img class="image" src="assets/images/scissors1.png" 
+                    alt="Scissors" /></button>
         </div>
         <!--Player area showing player score and image representing player choice-->
         <div class="player">
-            <h3 class="scores">Your score: <span id="player-score">0</span></h3>    
-            <img id="player-image" src="assets/images/rpslogo_small.png" alt="Rock Paper Scissors">        
+            <h3 class="scores">Your score: <span id="player-score">0</span></h3>
+            <img id="player-image" src="assets/images/rpslogo_small.png" alt="Rock Paper Scissors">
         </div>
         <!--Machine area showing machine score and image representing machine choice-->
         <div class="machine">
@@ -39,33 +43,24 @@
             <img id="machine-image" src="assets/images/rpslogo_small.png" alt="Rock Paper Scissors">
         </div>
         <div id="game-messages"></div>
-        <!-- <p><b>What does this look like?</b></p> -->
-        <!-- <div class="winner-modal">
+        <!-- Modal area -->
+        <div id="gameModal" class="modal">
+            <!-- Modal content -->
             <div class="modal-content">
-                <span class="close"><i class="fas fa-times"></i></span>
-                <h3 class="modal-header">Set dynamically</h3>
+                <span class="close">&times;</span>
+                <h3 class="modal-header">Game Over</h3>
                 <p class="modal-result">Set dynamically</p>
             </div>
-        </div> -->
-
-        <!-- The Modal -->
-        <div id="gameModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-         <span class="close">&times;</span>
-         <h3 class="modal-header">Game Over</h3>
-         <p class="modal-result">Set dynamically</p>
         </div>
-       </div>
     </section>
     <footer>
-    <!--Rules area -->
+        <!--Rules area -->
         <div id="rules-area">
-            <img id="rules-image" src="assets/images/rps_rules2.png" alt="Rock Paper Scissors Rules">  
-        </div>              
+            <img id="rules-image" src="assets/images/rps_rules2.png" alt="Rock Paper Scissors Rules">
+        </div>
     </footer>
     <!--Link to Javascript file-->
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

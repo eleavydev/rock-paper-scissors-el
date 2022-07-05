@@ -1,90 +1,129 @@
 # Rock Paper Scissors - You against the machine!!
 
-Rock Paper Scissors - You against the machine!! is a very simple website which allows users to play a game of Rock Paper Scissors. 
+Rock Paper Scissors - You against the machine!! is a very simple site which allows users to play a game of Rock Paper Scissors against the computer. 
 
-Users of this game will be able to see the rules of the game, play against the computer, view their score and see who wins the entire game. 
+Users of this game will be able to view the rules of the game, play against the computer, view their score and see who wins the entire game. 
 The winner is whoever wins the most out of 5 rounds. 
 
-<!-- ![Screenshots of Red Roots Farm website](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1653391863/redrootsfarm/Website_Screenshot24052022_p2wam3.png "Red Roots Farm") -->
+![Screenshots of Rock Paper Scissors website](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657051819/Rock%20paper%20scissors/Rock_Paper_Scissors_apynxn.png "Rock Paper Scissors") 
 
-#### Live website can be found at: https://eleavydev.github.io/rock-paper-scissors-el/
+#### Live game can be found at: https://eleavydev.github.io/rock-paper-scissors-el/
 
 
 ## Features 
 ### Existing Features
 
-The first iteration of Rock paper Scissors is a simple one page website. 
+The first iteration of Rock paper Scissors is a simple one page website which allows the user to play the game (best out of 5 rounds). 
+Game displays modal at end of game to inform user who has won. 
 
+## The Game page
+The game page is made up of different sections: Header, Instructions and Choice area, Player and Machine area, Game Messages area and Rules area. 
 
-- __The Header (Including landing page image and Tagline)__
+![Game](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657053436/Rock%20paper%20scissors/1._Rock_Paper_Scissors_page_elbswk.png) 
 
+## The Header 
 
+![Header](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657053435/Rock%20paper%20scissors/2._Header_Rock_Paper_Scissors_page_zzfcbg.png) 
 
+  - The header introduces the Game Title: Rock Paper Scissors - You against the Machine!
+  - The title aims to be fun and light-hearted, offering the user an invitation to take on the Machine (ie Computer) for a simple and fun game of Rock, Paper, Scissors.
 
-## The Header (including landing page image and Tagline)
+## Instructions and Choice area
 
-<!-- ![Landing Page](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1653388732/redrootsfarm/redroots_heroimage_withTagline_lv3ovl.png) -->
+![Instructions and Choice area](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657053436/Rock%20paper%20scissors/3._Instructions_and_Player_Choice_Rock_Paper_Scissors_page_sqi2un.png) 
 
-  - The landing page includes a photograph of Red Roots Farm with vibrant trees, flowers and green grass aiming to give the user an instant 'feel' for the Red Roots Farm space. 
-  - This section aims to invite the user in to Red Roots Farm with an animation to grab their attention and almost pull them gently inwards to explore more. 
-  - The tagline of "Reconnect - Realign - Rediscover" is immediately below the photograph in block capitals. This captures the essence of Red Roots Farm - Claire and Tom hope they can help people to reconnect, realign and rediscover during a visit to Red Roots Farm. 
+ - The instruction is a simple one liner: "Player, please make your choice ... choose Rock, Paper or Scissos below:"
+ - This was an intentional design choice in order to keep the game simple - no complex instructions required!
+ - The choice area provides user with the choice of 3 different buttons - 1. Rock 2. Paper and 3. Scissors. 
+ - The buttons use simple images in fun colours as a design choice again to try keep the game fun, light and enjoyable. 
 
-## About Us Section
+## Player and Machine area (Before game starts)
 
-<!-- ![About Us](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1653388731/redrootsfarm/redroots_aboutus_q4amon.png) -->
+![Player and Machine area - Before game starts](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657054590/Rock%20paper%20scissors/4._Player_and_Machine_area_Rock_Paper_Scissors_page_fhltvp.png) 
 
-  - The About Us section sets the scene of what Red Roots Farm is, where it is located and introduces the owners. 
-  - It describes the Red Roots Farm concept with simple yet emotive language such as safe, peaceful, relax, realign and rediscover. This is in line with the Landing page photo and the tagline and aims to interest the user and invite them to learn more. 
-  - The guiding values of slowing down, minding ourselves, each other and the land are mentioned. 
-  - It also explains where the name "Red Roots farm" came from and relates it to visualising our base chakra with big strong red roots stretching deep into the earth, grounding us. 
-  - Tom and Claire, the owners of Red Roots farm are briefly introduced and their skills and passion for sustainability, wellness and creativity are highlighted. 
-  - A photo of a smiling Tom and Claire is included which makes it more personal and encourages the user to feel like a friend. 
-  - This opening section aims to give the user a mini introduction into the meaning and purpose of Red Roots farm and it's owners Tom and Claire. 
+ - This area reflects the players and the machines choice of Rock, Paper, Scissors and also displays the scores for both player and the machine. 
+ - Initially both player and machine scores display as 0. 
+ - Initially both player and machine areas display the Rock, Paper, Scissors logo as default images. 
+ 
+  - Once the player makes their choice, the player image changes to reflect the players choice. 
+ - At the same time, the machine's random choice has been made in the code behind and the machine image also changes to reflect this choice. 
+ - Scores are updated in this area - this allows the user to see how they are doing during every round. 
 
+## Player and Machine area (During game)
 
+![Player and Machine area - During game](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657056467/Rock%20paper%20scissors/4._Player_and_Machine_area_Rock_Paper_Scissors_page_after_txp72w.png) 
+
+## Messages area
+
+![Messages area](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657053600/Rock%20paper%20scissors/4._Messages_area_Rock_Paper_Scissors_page_cm7cef.png) 
+
+ - As each round is played ie. user makes choice between Rock, Paper or Scissors, and machine choice is made in the background, a message will be displayed in this area. 
+ - Message will be one of three options 1. Round Winner: Machine, 2. Round Winner: You or 3. It's a draw! such as below: 
+      - Round Winner: Machine... Rock Blunts Scissors - Hard luck.
+      - Round Winner: You! Scissors cut Paper - You rock!!
+      - It's a draw!! scissors = scissors
+  - Again, as a design choice, the messages are kept light, fun and simple yet informative. 
+  - The aim is to keep the user both informed and engaged. 
+
+## Rules area
+
+![Rules area](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657054439/Rock%20paper%20scissors/Rules_area_Rock_Paper_Scissors_page_uusf9k.png) 
+
+  - The rules are displayed in a simple image format - both graphically in pictures and also in words. 
+  - Again simplicity is key and the rules are not made overly complex. 
+
+## The Modal 
+The modal is part of the index.html but by default is hidden. When the end of game is reached (ie Machine or Player has reached a score of 5) the modal will display. 
+
+![Modal area](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657054816/Rock%20paper%20scissors/5._Game_Over_Modal_Rock_Paper_Scissors_dk2nwm.png) 
+
+  - The modal informs the user that the Game is over!
+  - The modal informs the user who won the game with either one of two options. 
+      - Congrats, You have won with Score of 5 - You rock!! Press X in Top Right corner to exit and play again.
+      - Machine has won with Score of 5, Better luck next time! Press X in Top Right corner to exit and play again.
+  - This modal aims to inform the user of the game outcome in a fun way. 
+  - For consistency, colours used in the modal are the same as user has seen throughout the game. 
 
 
 ## Design choices
 
-Certain design decisions were made to keep the website 'clean', uncluttered, simple and easy to navigate. 
+Certain design decisions were made to keep the game uncluttered and simple.  
 
-- In keeping with the essence of Red Roots Farm, photos on the website show flowers, greenery, colour and vibrancy of nature. 
+- Layout and wording is kept simple and informal throughout the game. 
 
-- There are lots of images displayed on the website as the saying says... "A picture paints a thousand words". 
+- Exclamation marks are used for some of the messaging and fun terms like "You rock" in an attempt to keep the game fun and user engaged and entertained. 
 
-- Fonts chosen for the website were simple ones - Lato (For Headings) and Merriweather (For Body Text) as research indicated they pair well together and are "pleasant to read". 
+- Fonts chosen for the website were simple ones - Lato and Merriweather.  
 
-- As an alternative to using pure white as background colour, the colour Snow (#FFFAFA) was used as research suggested this as a good alternative 
-[PicMonkey](https://www.picmonkey.com/colors/white/off-white). 
+- As an alternative to using pure white as background colour, the colour Snow Alice blue was used. 
 
 ## User Stories
 
-- As a user I expect the site to be uncluttered and easy to read.
 
-- As a user I expect the site to be easy to navigate. 
+- As a user I expect the game to be easy and enjoyable to play. 
 
-- As a user I want to know what page I am currently on. 
+- As a user I expect to see rules and clear instruction in what I need to do. 
 
-- As a user I want to know I can get back to Home from any page I am on. 
+- As a user I want to see in picture form the choice (Rock, Paper or Scissors) that I have made.
 
-- As a user I want to know about Red Roots Farm without having to trawl through lots of information. 
+- As a user I want to see in picture form the choice (Rock, Paper or Scissors) that the machine has made. 
 
-- As a user I want to know the key points at a glance (What is Red Roots farm, who are the people behind it, what can I do there and what are the spaces there). 
+- As a user I want to be informed of the outcome at the end of every round. 
+
+- As a user I want to be informed of the outcome at the very end of the game. 
+
+- As a user I want to be clear when the game is over. 
 
 
 ## Testing 
 
 Manual Testing 
 
-- I tested that this website works in different browsers: Edge, Chrome and Safari. 
+- I tested that this website works in different browsers: Edge, Chrome and Firefox. 
 
 - I tested that this website is responsive, and displays correctly on standard screen sizes using the devtools device toolbar. 
 
 - I confirmed that the navigation, header, about us, gallery and contact us text is legible and easy to understand. 
-
-- I confirmed that the links throughout the site all work and go where they're meant to (Logo, Navigation Bar, Local Attraction website links to external, Social Media links in footer). 
-
-- I confirmed that the form works as expected. Every field (Name, Email address, Question/Comment) has required field validator and also Email address field requires email address. Finally, the submit button works correctly. 
 
 
 Solved Bugs 
@@ -165,10 +204,10 @@ No Unfixed bugs.
 
 ### Content 
 
-- The text for the Home page was created by Red Roots farm and myself as website creator. 
+- The text for the game was created by myself. 
 - The fonts (Lato and Merriweather) were taken from [Google fonts](https://fonts.google.com/). 
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-- The Love Running and Coders Coffehouse projects were both used as great guides to help with this first project. 
+- The icons and images in the game were taken from https://www.istockphoto.com/ and subsquently edited to add in rule text and dice up images for use as individual icons
+- The Love Maths and Code insitute projects were both used as great guides to help with this project. 
 - Websites such as [Stackoverflow](https://stackoverflow.com/), [CommunitySpiceworks](https://community.spiceworks.com/) and [W3Schools](https://www.w3schools.com/) were consulted for help with this project. 
 - My mentor Chris was very patient and helpful during this process. 
 - Also our Cohort facilitators Kenan and Kasia along with classmates and peers on Slack and tutor support were very helpful to draw on for support. 
@@ -176,6 +215,4 @@ No Unfixed bugs.
 ### Media
 
 - The photos used throughout this site have all been created by Red Roots farm. 
-- Font Awesome [Font Awesome](https://fontawesome.com) was very useful to find interesting icons to use. 
-- Large photos were compressed through [Birme](https://www.birme.net/) 
 - Photos were then hosted on [Cloudinary](https://cloudinary.com/)
