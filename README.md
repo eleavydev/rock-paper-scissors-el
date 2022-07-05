@@ -1,6 +1,6 @@
 # Rock Paper Scissors - You against the machine!!
 
-Rock Paper Scissors - You against the machine!! is a very simple site which allows users to play a game of Rock Paper Scissors against the computer. 
+Rock Paper Scissors - You against the machine!! is a very simple game which allows users to play Rock Paper Scissors against the computer. 
 
 Users of this game will be able to view the rules of the game, play against the computer, view their score and see who wins the entire game. 
 The winner is whoever wins the most out of 5 rounds. 
@@ -15,6 +15,19 @@ The winner is whoever wins the most out of 5 rounds.
 
 The first iteration of Rock paper Scissors is a simple one page website which allows the user to play the game (best out of 5 rounds). 
 Game displays modal at end of game to inform user who has won. 
+
+### Future Features
+
+If I were to extend the game in future, I would add in below features. 
+
+  - Include a start page where user can: 
+      - Enter name.
+      - Choose number of rounds to play ie 5, 7 or 9.      
+      - Set difficulty of game ie Low or Medium 
+  - Based on this user input, I would: 
+       - Personalise messages using users name. 
+       - Dynamically set the number of rounds that are played before game over modal displays.
+       - Introduce Lizard and Spock elements to the game to increase the difficulty of the game. 
 
 ## The Game page
 The game page is made up of different sections: Header, Instructions and Choice area, Player and Machine area, Game Messages area and Rules area. 
@@ -151,7 +164,7 @@ Solved Bugs
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feleavydev.github.io%2Fredroots-farm%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - Accessibility 
   - I confirmed that the colours and fonts chosen are easy to read and accessible by running it through lighthouse in devtools. 
- - ![Lighthouse Scores](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1653604983/redrootsfarm/lighthousescores_ekmdyz.png)
+ - ![Lighthouse Scores](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657058937/Rock%20paper%20scissors/LighthouseValidation_s64yin.png)
 
 
 ### Unfixed Bugs
@@ -160,21 +173,21 @@ No Unfixed bugs.
 
 ## Deployment
 
-- My Source Code on GitHub is available at: [eleavyGitHub](https://github.com/eleavydev/redroots-farm)
+- My Source Code on GitHub is available at: [eleavyGitHub](https://github.com/eleavydev/rock-paper-scissors-el)  
 
-- My live deployed project is available at [RedRootsFarm](https://eleavydev.github.io/redroots-farm/)
+- My live deployed project is available at [Rock Paper Scissors](https://eleavydev.github.io/rock-paper-scissors-el/)  
 
 ### Cloning and Forking  
 
 1. Cloning
 
-- Go to my GutHub repository at: [eleavyGitHub](https://github.com/eleavydev/redroots-farm). 
+- Go to my GutHub repository at: [eleavyGitHub](https://github.com/eleavydev/rock-paper-scissors-el). 
 - Click on the Green "Code" drop down. 
 - Choose to either Download the code as a Zip file or Clone manually using Gitlink provided. 
 
 2. Forking
 
-- Go to my GitHub repository at: [eleavyGitHub](https://github.com/eleavydev/redroots-farm). 
+- Go to my GitHub repository at: [eleavyGitHub](https://github.com/eleavydev/rock-paper-scissors-el). 
 - Click the Fork button at the top right of the page and wait for a few seconds. 
 - You will see that this newly forked repository gets created under your GitHub account.  
 
@@ -188,7 +201,7 @@ No Unfixed bugs.
     - Type in Gitpod, and its the very first result is the extension that is required. 
     - Click on it click on "Add to Firefox".
     - Confirm permissions. 
-  - Go back to GitHub repository at: [eleavyGitHub](https://github.com/eleavydev/redroots-farm) and click on the green Gitpod button. 
+  - Go back to GitHub repository at: [eleavyGitHub](https://github.com/eleavydev/rock-paper-scissors-el) and click on the green Gitpod button. 
   - This will open the code in a new Gitpod workspace for you to edit. 
   
 ### Remote Deployment  
@@ -204,15 +217,15 @@ No Unfixed bugs.
 
 ### Content 
 
-- The text for the game was created by myself. 
 - The fonts (Lato and Merriweather) were taken from [Google fonts](https://fonts.google.com/). 
-- The icons and images in the game were taken from https://www.istockphoto.com/ and subsquently edited to add in rule text and dice up images for use as individual icons
-- The Love Maths and Code insitute projects were both used as great guides to help with this project. 
-- Websites such as [Stackoverflow](https://stackoverflow.com/), [CommunitySpiceworks](https://community.spiceworks.com/) and [W3Schools](https://www.w3schools.com/) were consulted for help with this project. 
-- My mentor Chris was very patient and helpful during this process. 
+- The header text and game instructions was created by myself. 
+- The rule text was taken from Code Institute and added to image through Paint. 
+- The Love Maths and Code Institute projects were both used as great guides to help with this project. 
+- Websites such as [Stackoverflow](https://stackoverflow.com/), [CommunitySpiceworks](https://community.spiceworks.com/) and [W3Schools](https://www.w3schools.com/) were consulted for help with this project. For Modals I especially found this W3 Schools resource very useful https://www.w3schools.com/howto/howto_css_modals.asp 
+- As always my mentor Chris was very patient and helpful during this process. 
 - Also our Cohort facilitators Kenan and Kasia along with classmates and peers on Slack and tutor support were very helpful to draw on for support. 
 
 ### Media
 
-- The photos used throughout this site have all been created by Red Roots farm. 
+- The icons and images in the game were taken from https://www.istockphoto.com/ and subsquently edited to add in rule text and dice up images for use as individual icons. 
 - Photos were then hosted on [Cloudinary](https://cloudinary.com/)
