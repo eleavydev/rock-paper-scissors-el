@@ -1,11 +1,11 @@
 # Rock Paper Scissors - You against the machine!!
 
-Rock Paper Scissors - You against the machine!! is a very simple game which allows users to play Rock Paper Scissors against the computer. 
+Rock Paper Scissors - You against the machine!! is a simple game which allows users to play Rock Paper Scissors against the computer. 
 
 Users of this game will be able to view the rules of the game, play against the computer, view their score and see who wins the entire game. 
 The winner is whoever wins the most out of 5 rounds. 
 
-![Screenshots of Rock Paper Scissors website](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657051819/Rock%20paper%20scissors/Rock_Paper_Scissors_apynxn.png "Rock Paper Scissors") 
+![Screenshots of Rock Paper Scissors website](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657059725/Rock%20paper%20scissors/Rock_Paper_Scissors_small_jtjne1.png "Rock Paper Scissors") 
 
 #### Live game can be found at: https://eleavydev.github.io/rock-paper-scissors-el/
 
@@ -126,6 +126,8 @@ Certain design decisions were made to keep the game uncluttered and simple.
 - As a user I want to be informed of the outcome at the very end of the game. 
 
 - As a user I want to be clear when the game is over. 
+
+- As a user I want to know how to play the game again if I so wish. 
 
 
 ## Testing 
