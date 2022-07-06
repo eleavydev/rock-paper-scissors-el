@@ -136,9 +136,18 @@ Manual Testing
 
 - I tested that this website works in different browsers: Edge, Chrome and Firefox. 
 
-- I tested that this website is responsive, and displays correctly on standard screen sizes using the devtools device toolbar. 
+- I tested that the game is responsive, and displays correctly on standard screen sizes using the devtools device toolbar. 
 
-- I confirmed that the navigation, header, about us, gallery and contact us text is legible and easy to understand. 
+- I tested that the game loads correctly with Scores displaying as 0 and Player and Machine choices displaying default images (RPS Logo). 
+
+- I tested that the game logic works and scores are updating correctly for Player. 
+
+- I tested that the game logic works and scores are updating correctly for Machine. 
+
+- I tested that when Player or Machine score reaches 5 that the Modal will display correctly to inform user that the Game is over. 
+
+- I tested the Modal displays correctly and closes when the X is clicked or player clicks outside the Modal. 
+
 
 
 Solved Bugs 
