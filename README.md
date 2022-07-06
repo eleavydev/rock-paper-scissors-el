@@ -142,28 +142,22 @@ Manual Testing
 
 
 Solved Bugs 
-- Logo on the Contact Us page didn't return back to index.html. 
-   - Fixed as required by changing url. 
-- Some of the images weren't loading correctly as initially I was hosting images within the site but then moved to Cloudinary.
-    - Fixed as required by correcting urls. 
-- Text Area on the Contact Us page wasn't resizing properly for smaller screens. 
-    - Fixed as required by setting max-width: 100% in media query. 
--   Home link was displaying as Active on the Gallery page Navigation Bar, when Gallery should be displaying as active. 
-    - Fixed as required by setting class="active" for Gallery. 
-- Message input field on the Contact Us Page didn't have required field validator on it. 
-    - Fixed as required by including 'required'. 
-- Message input field wasn't getting the exact same settings applied as the Name and Email Address, so appeared visually inconsistent. 
-    - Fixed as required by correcting css selectors. 
-- Uisneach link in Local Attractions section wasn't pointing to correct website. 
-    - Fixed as required by changing url. 
+- Player and Mahcine Scores were not incrementing correctly. 
+   - Debugged using console.log and alerts to see how far code was running. Found the Case statement wasn't working correctly, so fixed as required. 
+- Modal wasn't displaying when player or machine reached Score of 5. 
+    - Again debugged using console.log, located the error and fixed as required. 
+- After tidy up of assets folder, Rock Paper Scissors logo wasn't displaying - it was pointing to an older version of logo which was deleted. 
+    - Fixed as required by changing src for image. 
+-   Rules image wasn't responsive under 500px
+    - Included media query to make image responsive. 
 
 
 ### Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Feleavydev.github.io%2Fredroots-farm%2Findex.html)
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Feleavydev.github.io%2Frock-paper-scissors-el%2F)
 - CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feleavydev.github.io%2Fredroots-farm%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feleavydev.github.io%2Frock-paper-scissors-el%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - Accessibility 
   - I confirmed that the colours and fonts chosen are easy to read and accessible by running it through lighthouse in devtools. 
  - ![Lighthouse Scores](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657058937/Rock%20paper%20scissors/LighthouseValidation_s64yin.png)
