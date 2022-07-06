@@ -20,6 +20,13 @@ h1 {
 }
 
 
+/* Game Messages area */
+#game-messages{
+  text-align: center;
+  font-weight: bold;
+  border: 15px solid aliceblue
+}
+
 /* The Modal (background) */
 /* Setting background colour to Aliceblue again in keeping with above (design choice)  */
 .modal {
