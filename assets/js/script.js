@@ -1,6 +1,6 @@
 /**
  * Declare constants for DOM elements
- * and possible choices (Rock, Paper, Scissors) 
+ * and array to handle possible choices (Rock, Paper, Scissors) 
  */
 const buttons = document.getElementsByClassName("control");
 const playerImage = document.getElementById("player-image");
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-})
+});
 
 
 /**
@@ -174,15 +174,18 @@ function resetGame() {
   return Math.floor(Math.random() * max);
 }
 
-
-// When the user clicks on <span> (x), close the modal
+/**
+ * When the user clicks on (x), the modal closes
+ */
 span.onclick = function () {
   modal.style.display = "none";
-}
+};
 
-// When the user clicks anywhere outside of the modal, close it
+/**
+ * Additional error handling, if the user clicks anywhere outside of the modal, the modal will also close. 
+ */
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};

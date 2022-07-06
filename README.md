@@ -149,7 +149,6 @@ Manual Testing
 - I tested the Modal displays correctly and closes when the X is clicked or player clicks outside the Modal. 
 
 
-
 Solved Bugs 
 - Player and Mahcine Scores were not incrementing correctly. 
    - Debugged using console.log and alerts to see how far code was running. Found the Case statement wasn't working correctly, so fixed as required. 
@@ -159,6 +158,8 @@ Solved Bugs
     - Fixed as required by changing src for image. 
 -   Rules image wasn't responsive under 500px
     - Included media query to make image responsive. 
+-   When I ran through JSHint, I found that I was missing some semi-colons after adding event handlers. 
+    - Fixed as required by adding in semi-colons where necessary.  
 
 
 ### Validator Testing 
