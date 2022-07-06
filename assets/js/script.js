@@ -156,9 +156,9 @@ function resetGame() {
   document.getElementById("machine-score").innerText = 0;
 
   // Reset images and alt text
-  playerImage.src = `assets/images/rpslogo_small.png`;
+  playerImage.src = `assets/images/rpslogo.png`;
   playerImage.alt = "Rock Paper Scissors";
-  machineImage.src = `assets/images/rpslogo_small.png`;
+  machineImage.src = `assets/images/rpslogo.png`;
   machineImage.alt = "Rock Paper Scissors";
 
   //Reset Game Messages area 
