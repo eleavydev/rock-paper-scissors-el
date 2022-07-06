@@ -7,17 +7,16 @@ const playerImage = document.getElementById("player-image");
 const machineImage = document.getElementById("machine-image");
 const choices = ["rock", "paper", "scissors"];
 
+/**
+ * Declare Modal constants to handle modal elements
+ */
+const modalParagraph = document.getElementsByClassName('modal-result')[0];
+const modal = document.getElementById("gameModal");
+const span = document.getElementsByClassName("close")[0];
 
 //Declare variables
 let text;
 let playerChoice;
-
-/**
- * Declare Modal constants to handle modal paragraph Text and Modal variables modal and span. 
- */
-const modalParagraph = document.getElementsByClassName('modal-result')[0];
-var modal = document.getElementById("gameModal");
-var span = document.getElementsByClassName("close")[0];
 
 
 /**
