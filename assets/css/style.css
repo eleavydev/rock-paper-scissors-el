@@ -59,10 +59,10 @@ h1 {
   cursor: pointer;
 }
 
-/****************************************** Media Query for small screen sizes 500px and down*/
+/****************************************** Media Query for small screen sizes 500px and down***************************************************/
 @media screen and (max-width: 500px) {
 
-  /* Make image responsive */
+  /* Make Rules image responsive */
   #rules-image{
       max-width: 80%;
       width: 80%;
