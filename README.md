@@ -1,9 +1,15 @@
 # Rock Paper Scissors - You against the machine!!
 
-Rock Paper Scissors - You against the machine!! is a simple game which allows users to play Rock Paper Scissors against the computer. 
+Rock Paper Scissors - You against the machine!! is a simple game which allows a user to play Rock Paper Scissors against the computer. 
+
+Traditionally Rock-paper-scissors, also known as roshambo, has been played between family and friends to determine the outcome of a decision - important decisions like who gets to eat the last biscuit or who gets to sit in the front of the car on a long journey! 
+
+This player vs machine game can help players fine tune their game-playing skills so they are better prepared for when they next play against friends or family. 
+This game is short and sweet... with the first to reach a score of 5 announced as Winner! 
+It can be played quickly, many times throughout the day for fun and maybe even as a stress reliever! 
 
 Users of this game will be able to view the rules of the game, play against the computer, view their score and see who wins the entire game. 
-The winner is whoever wins the most out of 5 rounds. 
+As mentioned above the winner is whoever wins the most out of 5 rounds. 
 
 ![Screenshots of Rock Paper Scissors website](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657059725/Rock%20paper%20scissors/Rock_Paper_Scissors_small_jtjne1.png "Rock Paper Scissors") 
 
@@ -24,10 +30,12 @@ If I were to extend the game in future, I would add in below features.
       - Enter name.
       - Choose number of rounds to play ie 5, 7 or 9.      
       - Set difficulty of game ie Low or Medium 
+      - Choose audio on/off
   - Based on this user input, I would: 
        - Personalise messages using users name. 
        - Dynamically set the number of rounds that are played before game over modal displays.
        - Introduce Lizard and Spock elements to the game to increase the difficulty of the game. 
+       - Introduce applause at the end if the player wins. 
 
 ## The Game page
 The game page is made up of different sections: Header, Instructions and Choice area, Player and Machine area, Game Messages area and Rules area. 
@@ -45,7 +53,7 @@ The game page is made up of different sections: Header, Instructions and Choice 
 
 ![Instructions and Choice area](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657053436/Rock%20paper%20scissors/3._Instructions_and_Player_Choice_Rock_Paper_Scissors_page_sqi2un.png) 
 
- - The instruction is a simple one liner: "Player, please make your choice ... choose Rock, Paper or Scissos below:"
+ - The instruction is a simple one liner: "Player, please make your choice ... choose Rock, Paper or Scissors below:"
  - This was an intentional design choice in order to keep the game simple - no complex instructions required!
  - The choice area provides user with the choice of 3 different buttons - 1. Rock 2. Paper and 3. Scissors. 
  - The buttons use simple images in fun colours as a design choice again to try keep the game fun, light and enjoyable. 
@@ -68,12 +76,12 @@ The game page is made up of different sections: Header, Instructions and Choice 
 
 ## Messages area
 
-![Messages area](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657053600/Rock%20paper%20scissors/4._Messages_area_Rock_Paper_Scissors_page_cm7cef.png) 
+![Messages area](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657187152/Rock%20paper%20scissors/4._Messages_area_Rock_Paper_Scissors_kko3ks.png) 
 
  - As each round is played ie. user makes choice between Rock, Paper or Scissors, and machine choice is made in the background, a message will be displayed in this area. 
- - Message will be one of three options 1. Round Winner: Machine, 2. Round Winner: You or 3. It's a draw! such as below: 
-      - Round Winner: Machine... Rock Blunts Scissors - Hard luck.
+ - Message will be one of three options 1. Round Winner: You, 2. Round Winner: Machine or 3. It's a draw! such as below: 
       - Round Winner: You! Scissors cut Paper - You rock!!
+      - Round Winner: Machine... Rock Blunts Scissors - Hard luck.
       - It's a draw!! scissors = scissors
   - Again, as a design choice, the messages are kept light, fun and simple yet informative. 
   - The aim is to keep the user both informed and engaged. 
@@ -106,7 +114,7 @@ Certain design decisions were made to keep the game uncluttered and simple.
 
 - Exclamation marks are used for some of the messaging and fun terms like "You rock" in an attempt to keep the game fun and user engaged and entertained. 
 
-- Fonts chosen for the website were simple ones - Lato and Merriweather.  
+- Fonts chosen for the website were simple ones that work well together - Lato and Merriweather.  
 
 - As an alternative to using pure white as background colour, the colour Snow Alice blue was used. 
 
@@ -147,6 +155,8 @@ Manual Testing
 - I tested that when Player or Machine score reaches 5 that the Modal will display correctly to inform user that the Game is over. 
 
 - I tested the Modal displays correctly and closes when the X is clicked or player clicks outside the Modal. 
+
+- I confirmed that the colours and fonts chosen are easy to read and accessible by running through lighthouse in dev tools (see below section on Validator Testing)
 
 
 Solved Bugs 
@@ -225,7 +235,7 @@ No Unfixed bugs.
 
 - The fonts (Lato and Merriweather) were taken from [Google fonts](https://fonts.google.com/). 
 - The header text and game instructions was created by myself. 
-- The rule text was taken from Code Institute and added to image through Paint. 
+- The rule text was taken from Code Institute and added to rules image through Paint. 
 - The Love Maths and Code Institute projects were both used as great guides to help with this project. 
 - Websites such as [Stackoverflow](https://stackoverflow.com/), [CommunitySpiceworks](https://community.spiceworks.com/) and [W3Schools](https://www.w3schools.com/) were consulted for help with this project. For Modals I especially found this W3 Schools resource very useful https://www.w3schools.com/howto/howto_css_modals.asp 
 - As always my mentor Chris was very patient and helpful during this process. 
@@ -233,5 +243,5 @@ No Unfixed bugs.
 
 ### Media
 
-- The icons and images in the game were taken from https://www.istockphoto.com/ and subsquently edited to add in rule text and dice up images for use as individual icons. 
-- Photos were then hosted on [Cloudinary](https://cloudinary.com/)
+- The icons and images in the game were taken from https://www.istockphoto.com/ subsquently edited to add in rule text and then diced up for use as individual icons. 
+- Screenshots for this page were hosted on [Cloudinary](https://cloudinary.com/)
