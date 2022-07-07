@@ -4,24 +4,40 @@
 /* Set defaults for body text, font family:'Merriweather Sans' note background colour is Aliceblue as opposed to stark white (design choice)  */
 /* Body */
 body {
-    background-color: aliceblue;
-    font-family: 'Merriweather Sans', sans-serif;
-    color: #445361;
-    text-align: center;
+  background-color: aliceblue;
+  font-family: 'Merriweather Sans', sans-serif;
+  color: #445361;
+  text-align: center;
 }
 
-/* Heading */
-
+/* Heading - set font family to Lato and text-align to center */
 h1 {
-    font-family: 'Lato', sans-serif; 
-    text-align: center;
-    font-size: 2.5rem;
-    border-style: double;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  border-style: double;
 }
 
+/* Footer - set width to 100% */
+footer {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  padding-top: 5px;
+}
 
-/* Game Messages area */
-#game-messages{
+/* Game Area - set width to 75% to help achieve responsiveness */
+.game-area {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  text-align: center;
+}
+
+/* Game Messages Area - set font-weight to bold */
+#game-messages {
   text-align: center;
   font-weight: bold;
   border: 15px solid aliceblue
@@ -30,21 +46,25 @@ h1 {
 /* The Modal (background) */
 /* Setting background colour to Aliceblue again in keeping with above (design choice)  */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /*Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
   background-color: aliceblue;
 }
 
 /* Modal Content */
-/* Setting background colour of modal content to turquoise blue in keeping with image used in main page (design choice)  */
+/* Setting background colour of modal content to Turquoise blue in keeping with image used in main page (design choice)  */
 .modal-content {
-  background-color: rgb(127,207,218);
+  background-color: rgb(127, 207, 218);
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -59,6 +79,7 @@ h1 {
   font-weight: bold;
 }
 
+/* The Close Button - Pseudo class for close button on hover or focus */
 .close:hover,
 .close:focus {
   color: #000;
@@ -70,13 +91,12 @@ h1 {
 @media screen and (max-width: 500px) {
 
   /* Make Rules image responsive */
-  #rules-image{
-      max-width: 80%;
-      width: 80%;
-      /* height: auto !important;  */
-   }
+  #rules-image {
+    max-width: 80%;
+    width: 80%;
+    /* height: auto !important;  */
+  }
 
 }
 
 /******************************************End of Media Queries ********************************************************************************/
-

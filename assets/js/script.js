@@ -14,9 +14,10 @@ const modalParagraph = document.getElementsByClassName('modal-result')[0];
 const modal = document.getElementById("gameModal");
 const span = document.getElementsByClassName("close")[0];
 
-//Declare variables
+//Declare variables for text, playerChoice and machineChoice
 let text;
 let playerChoice;
+let machineChoice;
 
 
 /**
@@ -45,7 +46,7 @@ function playRound(playerChoice) {
   playerImage.alt = choices[playerChoice];
 
   // Call getRandomInt function to get Machine choice 
-  let machineChoice = getRandomInt(3);
+  machineChoice = getRandomInt(3);
 
   machineImage.src = `assets/images/${choices[machineChoice]}.png`;
   machineImage.alt = choices[machineChoice];
@@ -120,12 +121,12 @@ function incrementScore(roundWinner, text) {
       document.getElementById("player-score").innerText = ++oldPlayerScore;
       document.getElementById("game-messages").innerText = text;
       break;
-      // If machine was round winner increment Machine Score and update text in Game Messages area
+    // If machine was round winner increment Machine Score and update text in Game Messages area
     case (roundWinner === "machine"):
       document.getElementById("machine-score").innerText = ++oldMachineScore;
       document.getElementById("game-messages").innerText = text;
       break;
-      // If it's a draw, update text in Game Messages area only (no score increment required.)
+    // If it's a draw, update text in Game Messages area only (no score increment required.)
     case (roundWinner === ""):
       document.getElementById("game-messages").innerText = text;
       break;
@@ -170,7 +171,7 @@ function resetGame() {
 /**
  * Calculates a random Int between 0 and max which is parameter that is passed in on the fly
  */
- function getRandomInt(max) {
+function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
