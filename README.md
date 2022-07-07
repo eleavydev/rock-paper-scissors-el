@@ -9,7 +9,7 @@ This game is short and sweet... with the first to reach a score of 5 announced a
 It can be played quickly, many times throughout the day for fun and maybe even as a stress reliever! 
 
 Users of this game will be able to view the rules of the game, play against the computer, view their score and see who wins the entire game. 
-As mentioned above the winner is whoever wins the most out of 5 rounds. 
+As mentioned above the winner is whomever first reaches a score of 5. 
 
 ![Screenshots of Rock Paper Scissors website](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657059725/Rock%20paper%20scissors/Rock_Paper_Scissors_small_jtjne1.png "Rock Paper Scissors") 
 
@@ -19,7 +19,7 @@ As mentioned above the winner is whoever wins the most out of 5 rounds.
 ## Features 
 ### Existing Features
 
-The first iteration of Rock paper Scissors is a simple one page website which allows the user to play the game (best out of 5 rounds). 
+The first iteration of Rock paper Scissors is a simple one-page website which allows the user to play the game (first to reach 5 wins). 
 Game displays modal at end of game to inform user who has won. 
 
 ### Future Features
@@ -32,10 +32,15 @@ If I were to extend the game in future, I would add in below features.
       - Set difficulty of game ie Low or Medium 
       - Choose audio on/off
   - Based on this user input, I would: 
-       - Personalise messages using users name. 
+       - Personalise messages using user's name. 
        - Dynamically set the number of rounds that are played before game over modal displays.
        - Introduce Lizard and Spock elements to the game to increase the difficulty of the game. 
        - Introduce applause at the end if the player wins. 
+
+## Wireframe
+
+I prepared a rough wireframe of how the game should look and its different areas. 
+![Mockup](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657189220/Rock%20paper%20scissors/Wireframe_Rock_Paper_Scissors_lrrwq7.jpg) 
 
 ## The Game page
 The game page is made up of different sections: Header, Instructions and Choice area, Player and Machine area, Game Messages area and Rules area. 
@@ -54,7 +59,7 @@ The game page is made up of different sections: Header, Instructions and Choice 
 ![Instructions and Choice area](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657053436/Rock%20paper%20scissors/3._Instructions_and_Player_Choice_Rock_Paper_Scissors_page_sqi2un.png) 
 
  - The instruction is a simple one liner: "Player, please make your choice ... choose Rock, Paper or Scissors below:"
- - This was an intentional design choice in order to keep the game simple - no complex instructions required!
+ - This was an intentional design choice to keep the game simple - no complex instructions required!
  - The choice area provides user with the choice of 3 different buttons - 1. Rock 2. Paper and 3. Scissors. 
  - The buttons use simple images in fun colours as a design choice again to try keep the game fun, light and enjoyable. 
 
@@ -62,7 +67,7 @@ The game page is made up of different sections: Header, Instructions and Choice 
 
 ![Player and Machine area - Before game starts](https://res.cloudinary.com/dlsbkq7mw/image/upload/v1657054590/Rock%20paper%20scissors/4._Player_and_Machine_area_Rock_Paper_Scissors_page_fhltvp.png) 
 
- - This area reflects the players and the machines choice of Rock, Paper, Scissors and also displays the scores for both player and the machine. 
+ - This area reflects the players and the machines choice of Rock, Paper, Scissors and displays the scores for both player and the machine. 
  - Initially both player and machine scores display as 0. 
  - Initially both player and machine areas display the Rock, Paper, Scissors logo as default images. 
  
@@ -110,16 +115,15 @@ The modal is part of the index.html but by default is hidden. When the end of ga
 
 Certain design decisions were made to keep the game uncluttered and simple.  
 
-- Layout and wording is kept simple and informal throughout the game. 
+- Layout and wording are kept simple and informal throughout the game. 
 
-- Exclamation marks are used for some of the messaging and fun terms like "You rock" in an attempt to keep the game fun and user engaged and entertained. 
+- Exclamation marks are used for some of the messaging and fun terms like "You rock" to keep the game fun and user engaged and entertained. 
 
 - Fonts chosen for the website were simple ones that work well together - Lato and Merriweather.  
 
-- As an alternative to using pure white as background colour, the colour Snow Alice blue was used. 
+- As an alternative to using pure white as background colour, the colour Alice blue was used. 
 
 ## User Stories
-
 
 - As a user I expect the game to be easy and enjoyable to play. 
 
@@ -144,26 +148,26 @@ Manual Testing
 
 - I tested that this website works in different browsers: Edge, Chrome and Firefox. 
 
-- I tested that the game is responsive, and displays correctly on standard screen sizes using the devtools device toolbar. 
+- I tested that the game is responsive and displays correctly on standard screen sizes using the devtools device toolbar. 
 
 - I tested that the game loads correctly with Scores displaying as 0 and Player and Machine choices displaying default images (RPS Logo). 
 
-- I tested that the game logic works and scores are updating correctly for Player. 
+- I tested that the game logic works, and scores are updating correctly for Player. 
 
-- I tested that the game logic works and scores are updating correctly for Machine. 
+- I tested that the game logic works, and scores are updating correctly for Machine. 
 
 - I tested that when Player or Machine score reaches 5 that the Modal will display correctly to inform user that the Game is over. 
 
-- I tested the Modal displays correctly and closes when the X is clicked or player clicks outside the Modal. 
+- I tested the Modal displays correctly and closes when the X is clicked, or player clicks outside the Modal. 
 
 - I confirmed that the colours and fonts chosen are easy to read and accessible by running through lighthouse in dev tools (see below section on Validator Testing)
 
 
 Solved Bugs 
-- Player and Mahcine Scores were not incrementing correctly. 
+- Player and Machine Scores were not incrementing correctly. 
    - Debugged using console.log and alerts to see how far code was running. Found the Case statement wasn't working correctly, so fixed as required. 
 - Modal wasn't displaying when player or machine reached Score of 5. 
-    - Again debugged using console.log, located the error and fixed as required. 
+    - Again I debugged using console.log, located the error and fixed as required. 
 - After tidy up of assets folder, Rock Paper Scissors logo wasn't displaying - it was pointing to an older version of logo which was deleted. 
     - Fixed as required by changing src for image. 
 -   Rules image wasn't responsive under 500px
@@ -214,7 +218,7 @@ No Unfixed bugs.
 - Go to Gitpod.io and create a free account. 
 - Download and install necessary extension to Firefox/Chrome (This extension will add green Gitpod button to GitHub so you can easily open repository in Gitpod). 
     - In Firefox, go to menu on the top right and click on Add-ons. From there then search for Gitpod.
-    - Type in Gitpod, and its the very first result is the extension that is required. 
+    - Type in Gitpod, and it's the very first result is the extension that is required. 
     - Click on it click on "Add to Firefox".
     - Confirm permissions. 
   - Go back to GitHub repository at: [eleavyGitHub](https://github.com/eleavydev/rock-paper-scissors-el) and click on the green Gitpod button. 
@@ -234,14 +238,14 @@ No Unfixed bugs.
 ### Content 
 
 - The fonts (Lato and Merriweather) were taken from [Google fonts](https://fonts.google.com/). 
-- The header text and game instructions was created by myself. 
+- The header text and game instructions were created by myself. 
 - The rule text was taken from Code Institute and added to rules image through Paint. 
 - The Love Maths and Code Institute projects were both used as great guides to help with this project. 
 - Websites such as [Stackoverflow](https://stackoverflow.com/), [CommunitySpiceworks](https://community.spiceworks.com/) and [W3Schools](https://www.w3schools.com/) were consulted for help with this project. For Modals I especially found this W3 Schools resource very useful https://www.w3schools.com/howto/howto_css_modals.asp 
-- As always my mentor Chris was very patient and helpful during this process. 
-- Also our Cohort facilitators Kenan and Kasia along with classmates and peers on Slack and tutor support were very helpful to draw on for support. 
+- As always, my mentor Chris was very patient and encouraging during this process. 
+- Also, our Cohort facilitators Kenan and Kasia along with classmates and peers on Slack and tutor support were very helpful to draw on for support. 
 
 ### Media
 
-- The icons and images in the game were taken from https://www.istockphoto.com/ subsquently edited to add in rule text and then diced up for use as individual icons. 
+- The icons and images in the game were taken from https://www.istockphoto.com/ subsequently edited to add in rule text and then diced up for use as individual icons. 
 - Screenshots for this page were hosted on [Cloudinary](https://cloudinary.com/)
